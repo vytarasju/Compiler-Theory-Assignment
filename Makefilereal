@@ -1,0 +1,2 @@
+bison -d -o t_parse.c t_parse.y ; gcc -c -o t_parse.o t_parse.c ; flex -ot_lex.c t_lex.l ; gcc -c -o t_lex.o t_lex.c ; gcc -c -o t2c_tree.o t2c_tree.c ; gcc -c -o t2c.o t2c.c ; gcc -o t2c t2c.o t2c_tree.o t_parse.o t_lex.o ; rm t2c.o t2c_tree.o t_parse.o t_parse.c t_parse.h t_lex.c t_lex.o ;
+
